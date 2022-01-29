@@ -5,17 +5,21 @@ File: File is a named logical memory location where group of data stored in term
 Folder: Collection of Files grouped to gether to quickly locate and access is called a Folder
 
 How to store the data in Files?
-We can store the data in files interms of text/sequence of characters inside it. when we store the business data in the files, we can read it and understand, but we wanted programs/software applications to read and process the data that is stored in the Files.
+We can store the data in files interms of text/sequence of characters inside it. when we store the business data in the files, we can read it and understand, 
+but we wanted programs/software applications to read and process the data that is stored in the Files.
 	
-Programs cannot understand the data that is stored interms of text of characters as programs cannot interpret natural/human language so we need to store the data in the file in a format where humans and programs also should be able understand and perform operations that where we have 2 formats of storing the data
+Programs cannot understand the data that is stored interms of text of characters as programs cannot interpret natural/human language so we need to store the data
+in the file in a format where humans and programs also should be able understand and perform operations that where we have 2 formats of storing the data
 
 1. Human understandable format
 2. programmable/machine understand format
 
 How to store the data in programmable or machine understandable format?
-There are experts in the market performing research on how can we effectively store the data on a File so that programs can also read and perform operation and has introduced several forms of storing the data, let us explore those formats
+There are experts in the market performing research on how can we effectively store the data on a File so that programs can also read and perform operation and 
+has introduced several forms of storing the data, let us explore those formats
 
-Business data usually contains multiple fields of information, instead of capturing the data in a natural language, if we can extract those fields of data and store in a specific format in a file, then we can program the data.
+Business data usually contains multiple fields of information, instead of capturing the data in a natural language, if we can extract those fields of data and
+store in a specific format in a file, then we can program the data.
 	
 
 1. Fixed width field size format (FWFSF)
@@ -47,7 +51,8 @@ Now we can write program in java which can read each record and extract the fiel
 
 advantages:-
 	1. the data is both human and machine understandable format
-	2. it supports both sequential and random access of the data, at any point of time we can jump onto a specific record in the file and can read it because each record has fixed set of characters in length
+	2. it supports both sequential and random access of the data, at any point of time we can jump onto a specific record in the file and can read it
+	because each record has fixed set of characters in length
 	3. modifying the field of information is very easy since each field has fixed in size
 
 dis-advantages:-
