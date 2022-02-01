@@ -17,7 +17,7 @@ the fixed-width field size format or csv format are linear data representation m
 often contains relationships which can be represented using xml
 
 xml stores the data in hierarchial model permiting us to establish relationship between the data as parent/child. The xml is a text based data representation standard
-which made it inter-operable, which means any language or any operating system we can read/process xml
+which made it inter-operable, which means any language or any operating system can read/process xml
 
 advantages:-
 	1. both human readable and programmable format
