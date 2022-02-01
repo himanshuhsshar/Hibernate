@@ -33,7 +33,7 @@ dis-advantages:-
 	the rules/syntax over writing the data in xml format. a prior knowledge or understanding the xml rules/syntax are required.
 	3. since these are hierarchial data representation model, they consume huge cpu/memory while processing xml, so not ideally suited for processing
 	large volumes of data
-	4. There are too many programming methodologies are available around processing xml like stax, dom, sax, xpath, xquery etc which are tool complicated 
+	4. There are too many programming methodologies are available around processing xml like stax, dom, sax, xpath, xquery etc which are too complicated 
 	to understand and work with
 	5. The learning curve involved in learning xml technologies and related methodologies is very high
 	
