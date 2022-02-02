@@ -58,7 +58,7 @@ file, we can quickly de-serialize them and perform operation whenever we want so
 	
 advantages:-
 	1. the data we stored in serialized format cannot be read by anyone only programs can read/write the data, so it is highly secured.
-	2. no need to write data conversion logic in coverting the data into object format or while storing the from object into native format which removes lot of
+	2. no need to write data conversion logic in coverting the data into object format or while storing from object into native format which removes lot of
 	programming efforts in reading/writing the data and complexity in handling the data becomes zero
 	3. quite faster in processing the data since there is a native support by language itself in reading and writing
 dis-advantages:-
