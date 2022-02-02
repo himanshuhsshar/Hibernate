@@ -1,7 +1,8 @@
 XML (eXtensible markup language)
 advantages:-
 	1. both human and programs can read and understand the data
-	2. all the information we stored in xml is structured and semantics are attached, we can easily derive the boundaries of the data, so there is zero chance of mis-interpreting the data when we store the data in xml format
+	2. all the information we stored in xml is structured and semantics are attached, we can easily derive the boundaries of the data, so there is zero chance
+	of mis-interpreting the data when we store the data in xml format
 	3. XML is highly inter-operable, it is portable across all the platforms and languages
 	4. XML not only allows to store the data, it permits us to represent relationship between the data using hierarchial representation format
 	5. supports both sequential and random access as well in reading the data
@@ -13,18 +14,25 @@ dis-advantage:-
 	4. too many technologies are available around working with xml, that makes most of the people complicated to use or understand xml
 	5. learning curve required to learn xml will be very high and even complex 
 
-by considering the above things looks like xml is not suitable for storing/representing business data since the business data will be in large volume. XML is well suitable for storing configuration information of an application/components which is limited in size
+by considering the above things looks like xml is not suitable for storing/representing business data since the business data will be in large volume. XML is well
+suitable for storing configuration information of an application/components which is limited in size
 
-In java applications we want to process the data by keeping them in java objects, but none of the data representation standards supports storing the data in object format, so we need to write code for reading the data from underlying format and convert into objects to and fro as well, which requires lot of complex logic to be written and development time is also quite high to rescue from the above problem we can use serialization
+In java applications we want to process the data by keeping them in java objects, but none of the data representation standards supports storing the data in
+object format, so we need to write code for reading the data from underlying format and convert into objects to and fro as well, which requires lot of complex
+logic to be written and development time is also quite high to rescue from the above problem we can use serialization
 
 #4. Serialization
 -------------------
-Serialization is about converting the state of an object into bits and bytes format, so that we can write to an outputstream. in addition we can read the bits/bytes of data from an inputstream and convert into object representation using de-serialization technic
+Serialization is about converting the state of an object into bits and bytes format, so that we can write to an outputstream. in addition we can read the
+bits/bytes of data from an inputstream and convert into object representation using de-serialization technic
 
-Now we can store the data interms of objects and can covert the object state into bits/bytes format and write into File directly and viceversa so that we dont need to write data conversion logic in tranforming the data from underlying data representation format to object or object to data representation format
+Now we can store the data interms of objects and can covert the object state into bits/bytes format and write into File directly and viceversa so that we dont need
+to write data conversion logic in tranforming the data from underlying data representation format to object or object to data representation format
 
-for eg.. if we store the data in csv format as below and need to populate into Sale class object, then the programmer has to write logic for parsing the record of data in csv format extract the fields and populate into corresponding attributes of the Sale class object 
-In the other way if we want to store Sale class object into csv file, again we need to write logic for coverting object data into csv format to write it or append to the file
+for eg.. if we store the data in csv format as below and need to populate into Sale class object, then the programmer has to write logic for parsing the record of data
+in csv format extract the fields and populate into corresponding attributes of the Sale class object 
+In the other way if we want to store Sale class object into csv file, again we need to write logic for coverting object data into csv format to write it or append 
+to the file
 
 joseph,10/01/2022,20,2000,200,1800
 	
@@ -38,7 +46,8 @@ class Sale {
 	// setters and getters
 }	
 
-will be quite complex and huge amount of code need to be written in performing the operation. instead of it use serialization which has native support for transforming the object data into bits so that we can store on a File 
+will be quite complex and huge amount of code need to be written in performing the operation. instead of it use serialization which has native support for transforming
+the object data into bits so that we can store on a File 
 
 advantages:-
 	1. data is more secured, no one can read the data apart from application/program
@@ -67,14 +76,19 @@ when we are working with File-based persistency we need to write 2 types of logi
 1. persistence logic for storing and accessing the data from a File
 2. business logic for processing the data
 
-looks like within a typical application, most of the time developer has to write logic for storing/retrieving the data than business logic due to which the amount of development time and cost of development of the application is very high.
+looks like within a typical application, most of the time developer has to write logic for storing/retrieving the data than business logic due to which the amount
+of development time and cost of development of the application is very high.
 	
 How to overcome the above problems?
-That is where database management systems are introduced. database management system helps us in abstracting the underlying persistence aspects of storing/retrieving the data from a File System.
+That is where database management systems are introduced. database management system helps us in abstracting the underlying persistence aspects of storing/retrieving
+the data from a File System.
 	
-The programmer only has to write the logic for communicating with database management system asking to store/fetch the data, he dont need to bother about how the underlying data is stored and how to access it, the persistence aspects are abstracted from the programmer.
+The programmer only has to write the logic for communicating with database management system asking to store/fetch the data, he dont need to bother about how the
+underlying data is stored and how to access it, the persistence aspects are abstracted from the programmer.
 	
-Now the we dont need to complex persistence logic in dealing with storing/retrieving the data from file, we just only need to write the logic for communicating with dbms and perform business logic, so that the amount of code and development time required for building the applications will reduce greatly. and cost of building the application comes down.
+Now the we dont need to complex persistence logic in dealing with storing/retrieving the data from file, we just only need to write the logic for communicating with
+dbms and perform business logic, so that the amount of code and development time required for building the applications will reduce greatly. and cost of building the
+application comes down.
 	
 advantages:-
 	1. no need to bother about underlying data representation formats in choosing and storing the data, just pass the data to dbms it takes care of persisting it 
