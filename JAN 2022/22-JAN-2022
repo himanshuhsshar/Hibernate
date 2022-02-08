@@ -30,7 +30,7 @@ complex manage and maintain
 As all the tables in RDBMS are defined with semantics and structure we can establish relationship between the tables by writing one of the column of data of a table in
 another table as relationship column, so that we can avoid using addresses in establishing relationship.
 	
-But uniquely identifying the record in relationship with my record in another table is not possible if there multiple records in another table with same data, so how to
+But uniquely identifying the record in relationship with my record in another table is not possible if there multiple records in the table with same data, so how to
 solve this problem?
 	
 To help us in uniquely identifying a record of data in a table, inorder to establish relationship with another record of another table, the primary key column has been
