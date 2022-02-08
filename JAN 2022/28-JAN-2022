@@ -2,7 +2,9 @@
 What is semi-structured data means?
 For a given data each record has different fields of information within it, which is called semi-structured data.
 	
-The RDBMS is not suitable for storing semi-structured data as we run into quite a number of problems in terms of desigining the schema model, performing persistence operations and even performance interms of queriying and accessing the data. In addition the cost of storing the data in RDBMS is quite high even though we dont use the capabilities of the database.
+The RDBMS is not suitable for storing semi-structured data as we run into quite a number of problems in terms of desigining the schema model, performing persistence
+operations and even performance interms of queriying and accessing the data. In addition the cost of storing the data in RDBMS is quite high even though we dont
+use the capabilities of the database.
 	
 Having these problems in dealing with Semi-Structured data, the people has introduced No-Sql or Semi-Structured Databases
 1. Mongo db
