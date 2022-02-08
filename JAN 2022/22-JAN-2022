@@ -38,7 +38,7 @@ introduced.
 	
 Primary Key = is a column defined inside a table, so that we can uniquely identify a record of information within the table to establish relationship with another
 record of other table.
-Foreign key = is a column of another table in which we store the values of the primary key of other table to establish relationship between the records
+Foreign key = is a column of another table primary key in which we store the values of the primary key of other table to establish relationship between the records
 of the tables
 
 In RDBMS we establish relationship between records of tables through data itself by writing interms of primary key and foreign key
