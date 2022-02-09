@@ -11,11 +11,13 @@ Based on the typical requirement of the application people might use any of the 
 2. No-Sql or Semi-Structured database
 3. Object Storage database
 
-None of them are mutual exclusive each of these databases compliments the application in one or the other way and plays their role in managing the data for an application/business.
+None of them are mutual exclusive each of these databases compliments the application in one or the other way and plays their role in managing the data for an 
+application/business.
 ----------------------------------------------------------------------------------------------
 Based on the discussion we carried previously, we learnt the RDBMS databases are being used for storing business/structured or transactional data for an application.
 
-RDBMS supports storing the data interms of tables. tables are defined with columns and data is stored in tupples/records. but our java applications wants to read the data interms of objects to perform the operations.
+RDBMS supports storing the data interms of tables. tables are defined with columns and data is stored in tupples/records. but our java applications wants to read 
+the data interms of objects to perform the operations.
 	
 
 Why does java programs wants to hold the data interms of objects to perform operations?
