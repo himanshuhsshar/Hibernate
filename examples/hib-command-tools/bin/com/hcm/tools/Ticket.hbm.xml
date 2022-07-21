@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.hcm.tools">
+	<class name="Ticket" table="ticket">
+		<id name="ticketNo" column="ticket_no" />
+		<property name="source" />
+		<property name="destination" />
+		<property name="journeyDate" column="journey_date" />
+		<property name="passengerName" column="passenger_name" />
+		<property name="seatNo" column="seat_no" />
+		<property name="amount" />
+	</class>
+</hibernate-mapping>
