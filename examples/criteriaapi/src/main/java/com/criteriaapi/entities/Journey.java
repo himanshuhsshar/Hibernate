@@ -1,14 +1,31 @@
-package com.dmloperations.entities;
+package com.criteriaapi.entities;
 
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+@Entity
+@Table(name = "journey")
 public class Journey implements Serializable {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "journey_no")
 	protected int journeyNo;
 	protected String source;
 	protected String destination;
+	@Column(name = "journey_date")
+	@Temporal(TemporalType.DATE)
 	protected Date journeyDate;
+	@Column(name = "commute_mode")
 	protected String commuteMode;
 	protected Integer hours;
 	protected double amount;
