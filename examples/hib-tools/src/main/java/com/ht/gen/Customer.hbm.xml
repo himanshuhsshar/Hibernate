@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 09-May-2022, 9:43:00 PM by Hibernate Tools 5.6.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="hibdb" name="com.ht.gen.Customer" optimistic-lock="none" table="customer">
+        <id name="customerNo" type="int">
+            <column name="customer_no"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="customerNm" type="string">
+            <column length="45" name="customer_nm" not-null="true"/>
+        </property>
+        <property name="dob" type="date">
+            <column length="10" name="dob"/>
+        </property>
+        <property name="gender" type="string">
+            <column length="45" name="gender"/>
+        </property>
+        <property name="mobileNo" type="string">
+            <column length="45" name="mobile_no" not-null="true"/>
+        </property>
+        <property name="emailAddress" type="string">
+            <column length="45" name="email_address"/>
+        </property>
+    </class>
+</hibernate-mapping>
