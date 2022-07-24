@@ -8,10 +8,11 @@ import javax.persistence.Embeddable;
 
 @Embeddable
 public class EduScholarshipNo implements Serializable {
+
 	protected int eduscno;
-	@Column(name = "college_code")
+	@Column(name="college_code")
 	protected String collegeCode;
-	@Column(name = "aadhar_no")
+	@Column(name="aadhar_no")
 	protected String aadharNo;
 
 	public int getEduscno() {
@@ -38,6 +39,7 @@ public class EduScholarshipNo implements Serializable {
 		this.aadharNo = aadharNo;
 	}
 
+	
 	@Override
 	public int hashCode() {
 		return Objects.hash(aadharNo, collegeCode, eduscno);

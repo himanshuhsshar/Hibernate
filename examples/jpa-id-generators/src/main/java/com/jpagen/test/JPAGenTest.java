@@ -5,20 +5,23 @@ import com.jpagen.entities.Bus;
 import com.jpagen.helper.EntityManagerFactoryRegistry;
 
 public class JPAGenTest {
+
 	public static void main(String[] args) {
+		// TODO Auto-generated method stub
 		try {
 			BusDao busDao = new BusDao();
 			Bus bus = new Bus();
 			bus.setBusType("Semi-Sleeper");
 			bus.setCapacity(36);
-			bus.setRegistrationNo("TS09BQ9383");
+			bus.setColor("blue");
 			bus.setFuelType("diesel");
-			bus.setColor("red");
-
+			bus.setRegistrationNo("TS49738B");
 			int busNo = busDao.saveBus(bus);
-			System.out.println("bus no: " + busNo);
+			System.out.println("Bus No : " + busNo);
 		} finally {
 			EntityManagerFactoryRegistry.closeEntityManagerFactory("bus_mysql_pu");
 		}
+
 	}
+
 }

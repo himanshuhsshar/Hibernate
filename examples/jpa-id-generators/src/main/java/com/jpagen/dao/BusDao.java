@@ -8,23 +8,28 @@ import com.jpagen.entities.Bus;
 import com.jpagen.helper.EntityManagerFactoryRegistry;
 
 public class BusDao {
+
 	public int saveBus(Bus bus) {
 		EntityTransaction entityTransaction = null;
-		EntityManagerFactory emf = null;
-		EntityManager em = null;
+		EntityManagerFactory entityManagerFactory = null;
+		EntityManager entityManager = null;
 		int busNo = 0;
 		boolean flag = false;
-
 		try {
-			emf = EntityManagerFactoryRegistry.getEntityManagerFactory("bus_mysql_pu");
-			em = emf.createEntityManager();
-			entityTransaction = em.getTransaction();
+
+			entityManagerFactory = EntityManagerFactoryRegistry.getEntityManagerFactory("bus_mysql_pu");
+
+			/*
+			 * entityManagerFactory =
+			 * EntityManagerFactoryRegistry.getEntityManagerFactory("bus_oracle_pu");
+			 */
+			entityManager = entityManagerFactory.createEntityManager();
+			entityTransaction = entityManager.getTransaction();
 			entityTransaction.begin();
-
-			em.persist(bus);
+			entityManager.persist(bus);
 			busNo = bus.getBusNo();
-
 			flag = true;
+
 		} finally {
 			if (entityTransaction != null) {
 				if (flag) {
@@ -33,11 +38,11 @@ public class BusDao {
 					entityTransaction.rollback();
 				}
 			}
-			if (em != null) {
-				em.close();
+			if (entityManager != null) {
+				entityManager.close();
 			}
 		}
-
 		return busNo;
 	}
+
 }

@@ -1,7 +1,6 @@
 package com.jpack.entities;
 
 import java.io.Serializable;
-import java.util.Date;
 import java.util.Objects;
 
 import javax.persistence.Column;
@@ -14,8 +13,9 @@ import javax.persistence.Table;
 public class EduScholarship implements Serializable {
 	@EmbeddedId
 	protected EduScholarshipNo eduScholarshipNo;
-	protected String fullname;
-	protected Date dob;
+	@Column(name = "full_name")
+	protected String fullName;
+	protected String dob;
 	protected String gender;
 	protected int grade;
 	protected String medium;
@@ -32,19 +32,19 @@ public class EduScholarship implements Serializable {
 		this.eduScholarshipNo = eduScholarshipNo;
 	}
 
-	public String getFullname() {
-		return fullname;
+	public String getFullName() {
+		return fullName;
 	}
 
-	public void setFullname(String fullname) {
-		this.fullname = fullname;
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
 	}
 
-	public Date getDob() {
+	public String getDob() {
 		return dob;
 	}
 
-	public void setDob(Date dob) {
+	public void setDob(String dob) {
 		this.dob = dob;
 	}
 
@@ -90,7 +90,7 @@ public class EduScholarship implements Serializable {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(academicYear, dob, eduScholarshipNo, fullname, gender, grade, grantAmount, medium);
+		return Objects.hash(academicYear, dob, eduScholarshipNo, fullName, gender, grade, grantAmount, medium);
 	}
 
 	@Override
@@ -103,7 +103,7 @@ public class EduScholarship implements Serializable {
 			return false;
 		EduScholarship other = (EduScholarship) obj;
 		return Objects.equals(academicYear, other.academicYear) && Objects.equals(dob, other.dob)
-				&& Objects.equals(eduScholarshipNo, other.eduScholarshipNo) && Objects.equals(fullname, other.fullname)
+				&& Objects.equals(eduScholarshipNo, other.eduScholarshipNo) && Objects.equals(fullName, other.fullName)
 				&& Objects.equals(gender, other.gender) && grade == other.grade
 				&& Float.floatToIntBits(grantAmount) == Float.floatToIntBits(other.grantAmount)
 				&& Objects.equals(medium, other.medium);
@@ -111,7 +111,7 @@ public class EduScholarship implements Serializable {
 
 	@Override
 	public String toString() {
-		return "EduScholarship [eduScholarshipNo=" + eduScholarshipNo + ", fullname=" + fullname + ", dob=" + dob
+		return "EduScholarship [eduScholarshipNo=" + eduScholarshipNo + ", fullName=" + fullName + ", dob=" + dob
 				+ ", gender=" + gender + ", grade=" + grade + ", medium=" + medium + ", academicYear=" + academicYear
 				+ ", grantAmount=" + grantAmount + "]";
 	}

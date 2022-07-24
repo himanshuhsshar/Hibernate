@@ -7,16 +7,15 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 public class EntityManagerFactoryRegistry {
+
 	private static Map<String, EntityManagerFactory> entityManagerFactoryMap = new ConcurrentHashMap<String, EntityManagerFactory>();
 
 	public static EntityManagerFactory getEntityManagerFactory(String puName) {
 		EntityManagerFactory emf = null;
 		if (entityManagerFactoryMap.containsKey(puName) == false) {
 			synchronized (entityManagerFactoryMap) {
-				if (entityManagerFactoryMap.containsKey(puName) == false) {
-					emf = Persistence.createEntityManagerFactory(puName);
-					entityManagerFactoryMap.put(puName, emf);
-				}
+				emf = Persistence.createEntityManagerFactory(puName);
+				entityManagerFactoryMap.put(puName, emf);
 			}
 		}
 		emf = entityManagerFactoryMap.get(puName);
@@ -27,5 +26,7 @@ public class EntityManagerFactoryRegistry {
 		if (entityManagerFactoryMap.containsKey(puName) == true) {
 			entityManagerFactoryMap.get(puName).close();
 		}
+
 	}
+
 }
